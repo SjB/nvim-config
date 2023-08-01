@@ -6,4 +6,7 @@ vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
+-- Paste over currently selected text without yanking it
+vim.keymap.set("v", "p", '"_dP')
+
 -- vim: ts=2 sts=2 sw=2 et
